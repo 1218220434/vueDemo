@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="app" class="main">
+    <Header />
+    <div class="d-flex"><Cmenu /><Cmain /></div>
+    <el-backtop><i class="el-icon-caret-top"></i></el-backtop>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Header from "./components/header.vue";
+import Cmenu from "./components/cmenu.vue";
+
+import Cmain from "./components/cmain.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
-  }
+    Header,
+    Cmenu,
+    Cmain,
+  },
 };
 </script>
 
 <style lang="scss">
+body {
+  font-size: 16px;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+.goTop {
+  height: 100vh;
+  overflow-x: hidden;
 }
 </style>
